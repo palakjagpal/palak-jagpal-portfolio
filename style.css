@@ -1,0 +1,574 @@
+/* Color Palette as CSS Variables */
+:root {
+    --isabelline: #edede9ff;
+    --timberwolf: #d6ccc2ff;
+    --linen: #f5ebe0ff;
+    --champagne-pink: #e3d5caff;
+    --pale-dogwood: #d5bdafff;
+
+    /* Semantic Mapping */
+    --background: var(--isabelline);
+    --primary: var(--pale-dogwood);
+    --accent: var(--champagne-pink);
+    --text: #3b3b3b;
+    --button-bg: var(--pale-dogwood);
+    --button-hover: var(--linen);
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Urbanist';
+    background-color: var(--background);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+.header {
+    background-color: transparent;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+    border: 4px solid var(--primary);
+    object-fit: cover;
+}
+
+.header h1 {
+    font-family: 'Montserrat Alternates';
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.header p.subtitle {
+    font-family: 'Quicksand';
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-top: 0.5rem;
+}
+
+.header p.bio {
+    font-family: 'Quicksand';
+    color: var(--text);
+    margin-top: 1rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Info */
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.contact-location {
+    font-size: 1rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.contact-link {
+    color: var(--text);
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-link:hover {
+    color: var(--primary);
+}
+
+/* Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.section {
+    background-color: transparent;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+.section-title {
+    font-family: 'Montserrat Alternates';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-toggle {
+    cursor: pointer;
+}
+
+/* Education */
+#education{
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.education-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--background);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.50rem;
+    font-weight: 700;
+}
+
+.education-details {
+    margin-left: 1rem;
+}
+
+.education-details h3{
+    color: var(--text);
+}
+
+.education-details p{
+    color: gray;
+}
+
+
+/* Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background-color: var(--accent);
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+    /* Add transitions for smooth animation */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    /* Add flexbox to align icon and text */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+}
+
+/* Add hover effect for skill tags */
+.skill-tag:hover {
+    /* Move the tag slightly up */
+    transform: translateY(-3px);
+    /* Darken the background color on hover */
+    background-color: color-mix(in srgb, var(--accent) 90%, black);
+}
+
+
+
+/* Projects & Internships */
+
+
+.projects-grid, .internships-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.project-card, .internship-card {
+    background-color: var(--isabelline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover, .internship-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+}
+
+.project-card h3, .internship-card h3{
+    color: var(--text);
+}
+
+.project-card p{
+    color: gray;
+    font-size: 0.87rem;
+}
+
+/* Animated Internship Links */
+.project-card a, .internship-card a, .internship-link {
+    color: rgb(92, 83, 83);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+    /* Add a transition for the text transform */
+    transition: transform 0.2s ease-in-out;
+    position: relative; /* Needed for the pseudo-element */
+}
+
+.project-card a::after, .internship-card a::after, .internship-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary); /* Use a color from your palette */
+    transition: width 0.3s ease-in-out;
+}
+
+.project-card a:hover, .internship-card a:hover, .internship-link:hover {
+    text-decoration: none; /* Remove default underline to use the animated one */
+    /* Push the text slightly to the right */
+    transform: translateX(5px);
+}
+
+.project-card a:hover::after, .internship-card a:hover::after, .internship-link:hover::after {
+    width: 100%;
+}
+
+
+/* Contact Form */
+#contact {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    text-align: center;
+}
+
+#contact-form-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+#contact-form-container.open {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
+form {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border-radius: 0.375rem;
+    border: none;
+    padding: 0.5rem;
+    font-family: 'Urbanist';
+    letter-spacing: 1.3px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 50%, transparent);
+    letter-spacing: 1.3px;
+}
+
+.submit-button {
+    background-color: var(--button-bg);
+    color: var(--text);
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    /* Add multiple transitions for a smoother effect */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: var(--text);
+    color: var(--button-bg);
+    /* Scale the button up slightly */
+    transform: scale(1.05);
+    /* Add a subtle shadow for depth */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+}
+
+.message-box {
+    display: none;
+    background-color: var(--accent);
+    border: 1px solid var(--primary);
+    color: darkgreen;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+span {
+    color: red;
+}
+
+/* Back to Top Button */
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary);
+    color: #ffffff;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 999;
+
+}
+
+#back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top-btn:hover {
+    background-color: var(--text);
+    color: var(--pale-dogwood);
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width : 420px){
+    #contact{
+        width: 80%;
+        overflow-x: hidden;
+    }
+    form{
+        max-width: 80%;
+    }
+    .contact-info-container{
+        align-items: center;
+    }
+    #back-to-top {
+        width: 20px;
+        height: 20px;
+        font-size: 0.50rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width : 460px){
+    #contact{
+        width: 80%;
+        overflow-x: hidden;
+    }
+    form{
+        max-width: 80%;
+    }
+    .contact-info-container{
+        align-items: center;
+    }
+}
+
+@media (max-width : 520px){
+    #contact{
+        width: 80%;
+        overflow-x: hidden;
+    }
+    form{
+        max-width: 80%;
+    }
+    .contact-info-container{
+        align-items: center;
+    }
+}
+
+@media (max-width : 590px){
+    #contact{
+        width: 90%;
+        overflow-x: hidden;
+    }
+    form{
+        max-width: 85%;
+    }
+    .contact-info-container{
+        align-items: center;
+    }
+}
+
+@media (max-width : 690px){
+    #contact{
+        width: 90%;
+            overflow-x: hidden;
+    }
+    form{
+        max-width: 90%;
+    }
+    .contact-info-container{
+        align-items: center;
+    }
+}
+
+@media (max-width : 752px){
+    #contact{
+        width: 80%;
+        overflow-x: hidden;
+    }
+    form{
+        max-width: 80%;
+    }
+    .contact-info-container{
+        align-items: center;
+    }
+}
+
+@media (max-width : 790px){
+    #contact{
+        width: 90%;
+        overflow-x: hidden;
+    }
+    form{
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .header {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+
+    .profile-picture {
+        margin: 0 2rem 0 0;
+    }
+
+    .main-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #projects,
+    #contact {
+        grid-column: span 2;
+    }
+
+    .projects-grid, .internships-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Keyframes for fade and slide-up animation */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .projects-grid, .internships-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+/* Animate-on-scroll base */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
