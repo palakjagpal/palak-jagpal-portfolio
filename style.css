@@ -572,3 +572,42 @@ span {
   opacity: 1;
   transform: translateY(0);
 }
+
+.fa-html5 { color: #e34c26; }
+.fa-css3-alt { color: #264de4; }
+.fa-js { color: #f0db4f; }
+.fa-database { color: #4DB33D; }
+.fa-php { color: #777bb3; }
+.fa-bootstrap { color: #7952b3; }
+.fa-node-js { color: #68a063; }
+.fa-mdb { color: #47A248; }
+.fa-server { color: #6c757d; }
+.fa-react { color: #61DBFB; }
+
+.fa-lightbulb { color: #f4c430; }       
+.fa-people-group { color: #0d6efd; }    
+.fa-clock { color: #198754; }           
+.fa-seedling { color: #20c997; }        
+.fa-comments { color: #6f42c1; }        
+.fa-feather-pointed { color: #fd7e14; } 
+
+.fa-envelope { color: #EA4335; }      
+.fa-linkedin { color: #0077B5; }      
+.fa-github { color: #171515; }        
+.fa-instagram { color: #E1306C; }     
+.fa-x-twitter { color: #000000; }     
+
+.contact-link:hover .fa-linkedin { color: #0077B5; }
+.contact-link:hover .fa-github { color: #333; }
+.contact-link:hover .fa-instagram { color: #ff4da6; }
+.contact-link:hover .fa-envelope { color: #ff5c5c; }
+.contact-link:hover .fa-x-twitter { color: #111; }
+
+.contact-link i {
+  font-size: 22px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover i {
+  transform: scale(1.3);
+}
