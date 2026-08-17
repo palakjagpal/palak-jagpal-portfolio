@@ -657,3 +657,28 @@ span {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+
+/* Major project highlight */
+.project-card.major-project {
+    border-left: 4px solid var(--primary);
+    background: linear-gradient(135deg, var(--isabelline) 0%, var(--linen) 100%);
+}
+
+.project-card.major-project:hover {
+    box-shadow: 0 10px 20px -3px rgba(0,0,0,0.15), 0 4px 8px -4px rgba(0,0,0,0.1);
+}
+
+/* Section sub-heading style */
+.section-subheading {
+    font-family: 'Montserrat Alternates';
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 1.5rem 0 0.75rem 0;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
